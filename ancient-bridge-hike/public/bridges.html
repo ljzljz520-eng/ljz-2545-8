@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>桥梁故事 · 千溪古桥徒步</title>
+<link rel="icon" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<div class="banner">示例工程：桥梁、片区与维护日历均为虚构演示数据；本平台不提供任何真实桥梁承载/安全保证。</div>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/index.html"><img src="/assets/img/logo.svg" alt="">千溪古桥徒步</a>
+    <nav class="nav">
+      <a href="/index.html" data-nav="home">首页</a>
+      <a href="/bridges.html" data-nav="bridges">桥梁故事</a>
+      <a href="/routes.html" data-nav="routes">路线规划</a>
+      <a href="/offline.html" data-nav="offline">离线导览</a>
+      <a href="/design.html" data-nav="design">设计说明</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<h1 style="margin:24px 0 6px">桥梁故事</h1>
+<p class="muted">结构、两端入口、观景可达与保护提示分开陈述——本页不提供“整座桥开放/关闭”的单一布尔值。</p>
+
+<div class="controls">
+  <label>选择桥梁
+    <select id="bridge-select">
+      <option value="anj">安吉石拱桥（千溪谷）</option>
+      <option value="qfl">清风廊桥（松坡）</option>
+    </select>
+  </label>
+  <label>评估日期 <input type="date" id="date-input" value="2026-09-30"></label>
+  <button class="btn" id="load-btn">查询当日状态</button>
+</div>
+
+<div class="notice info">
+  演练开关（仅前端演示）：
+  <label style="margin-left:8px"><input type="checkbox" id="close-end1"> 关闭该桥第一端入口</label>
+  <label style="margin-left:8px"><input type="checkbox" id="block-approach"> 临时封闭第一端引道</label>
+</div>
+<div id="story"></div>
+<script type="module" src="/assets/js/bridges.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>千溪古桥徒步 · 教学/演示项目。对象模型：桥梁本体 ≠ 入口 ≠ 通行段；状态精确到端、到段。</p>
+    <p>宽度或坡度未测一律显示“无法确认”；不自动认证适合儿童或无障碍；不编造真实桥梁承载保证。</p>
+  </div>
+</footer>
+<script src="/assets/js/common.js"></script>
+<script>document.querySelector('[data-nav="bridges"]').classList.add('active')</script>
+</body></html>

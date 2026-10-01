@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设计说明 · 千溪古桥徒步</title>
+<link rel="icon" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<div class="banner">示例工程：桥梁、片区与维护日历均为虚构演示数据；本平台不提供任何真实桥梁承载/安全保证。</div>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/index.html"><img src="/assets/img/logo.svg" alt="">千溪古桥徒步</a>
+    <nav class="nav">
+      <a href="/index.html" data-nav="home">首页</a>
+      <a href="/bridges.html" data-nav="bridges">桥梁故事</a>
+      <a href="/routes.html" data-nav="routes">路线规划</a>
+      <a href="/offline.html" data-nav="offline">离线导览</a>
+      <a href="/design.html" data-nav="design">设计说明</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<h1 style="margin:24px 0 6px">设计说明</h1>
+<p class="muted">原创视觉、对象模型与交互取舍一并交付。</p>
+<div class="card">
+  <h2>一、领域模型：为什么不能给整座桥一个布尔值</h2>
+  <p>系统中有三类独立对象：<b>桥梁本体</b>（bridge：结构、材质、保护提示）、<b>入口</b>（entrance：门、闸口、开闭时间）、<b>通行段</b>（edge：引道、桥面穿越段、步道、跨区联络线）。维护日历挂在通行段上。</p>
+  <ul>
+    <li>一端入口关闭或引道维护 → 该端桥头与从该端出发的穿越不可行；</li>
+    <li>但另一端入口、另一端观景点继续独立求值——“不能过桥”不等于“不能看桥”；</li>
+    <li>桥面穿越必须真正走上 crossing 段；两岸山路绕行可达时，结论是<b>“可绕行、不计为穿越古桥”</b>；</li>
+    <li>故事页 API 不输出 <span class="tag">open: true/false</span>，状态在 <span class="tag">ends[] / crossing / views[]</span> 上分别给出。</li>
+  </ul>
+</div>
+<div class="card">
+  <h2>二、规划：明确数据约束</h2>
+  <ul>
+    <li>净宽 &lt; 1.20m 或坡度 &gt; 15% 的实测段，亲子方案标记为实测阻断；</li>
+    <li>任一字段为 null（未测）→ <span class="badge unknown"><span class="dot unknown"></span>无法确认</span>，绝不臆断；</li>
+    <li>系统永不自动输出“适合儿童/无障碍(accessible)”认证；轮椅可达需要现场实测，本工程不替代；</li>
+    <li><b>锁定停留点</b>不可达 → 整体 infeasible + 关键阻断解释，不静默改点；未锁定点不可达 → 跳过并局部更新；</li>
+    <li>预制主题路线不预存路径，每次按当日状态逐段求值；与按图搜索同数据对比。</li>
+  </ul>
+</div>
+<div class="card">
+  <h2>三、离线包：版本清单 + 分块校验</h2>
+  <ul>
+    <li>manifest 声明每个版本的类型（full/delta）、父版本、块清单与 SHA-256；</li>
+    <li>块状态机：missing → verified / corrupt；全部 verified 才能 usable；</li>
+    <li>目标版本 ≤ 已装版本 → 409 stale_rollback（旧包回灌拒绝）；增量父版本不匹配 → delta_base_mismatch。</li>
+  </ul>
+</div>
+<div class="card">
+  <h2>四、原创视觉</h2>
+  <div class="grid cols-2">
+    <div><img src="/assets/img/arch-hero.svg" alt="安吉石拱桥插画" style="width:100%;border-radius:10px"><p class="muted">石拱桥：券脸石纹理、拱背隆起桥面、古樟与溪面倒影。</p></div>
+    <div><img src="/assets/img/covered-bridge.svg" alt="清风廊桥插画" style="width:100%;border-radius:10px"><p class="muted">木拱廊桥：九开间廊柱、瓦垄、木拱与潭水。</p></div>
+  </div>
+  <p>色板：溪岩苔绿 #274039（主色）、券脸石黄 #D9B45C（强调）、夯纸米 #F7F1E3（底）、警示朱 #B5462F、通行青 #3E7C6A。标题用中文衬线呼应碑刻气质，正文用系统无衬线保证可读性；状态用语义色+文字双编码，不只靠颜色区分。</p>
+</div>
+<div class="card">
+  <h2>五、不编造承载保证</h2>
+  <p>所有桥梁、题记与维护记录均为虚构；桥面数据（跨径、净宽、坡度）仅用于演示路径约束演算，<b>不是勘察结论，也不构成承重或通行安全承诺</b>。真实出行请以文物管理部门现场告示与专业评估为准。</p>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>千溪古桥徒步 · 教学/演示项目。对象模型：桥梁本体 ≠ 入口 ≠ 通行段；状态精确到端、到段。</p>
+    <p>宽度或坡度未测一律显示“无法确认”；不自动认证适合儿童或无障碍；不编造真实桥梁承载保证。</p>
+  </div>
+</footer>
+<script src="/assets/js/common.js"></script>
+<script>document.querySelector('[data-nav="design"]').classList.add('active')</script>
+</body></html>

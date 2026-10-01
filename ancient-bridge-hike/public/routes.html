@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>路线规划 · 千溪古桥徒步</title>
+<link rel="icon" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<div class="banner">示例工程：桥梁、片区与维护日历均为虚构演示数据；本平台不提供任何真实桥梁承载/安全保证。</div>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/index.html"><img src="/assets/img/logo.svg" alt="">千溪古桥徒步</a>
+    <nav class="nav">
+      <a href="/index.html" data-nav="home">首页</a>
+      <a href="/bridges.html" data-nav="bridges">桥梁故事</a>
+      <a href="/routes.html" data-nav="routes">路线规划</a>
+      <a href="/offline.html" data-nav="offline">离线导览</a>
+      <a href="/design.html" data-nav="design">设计说明</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<h1 style="margin:24px 0 6px">路线规划</h1>
+<p class="muted">同一日数据下，比较“预制主题路线”与“按图搜索”。锁定停留点不可达时给出解释；解锁后做局部更新。</p>
+
+<div class="controls">
+  <label>评估日期 <input type="date" id="date-input" value="2026-09-30"></label>
+  <label>按图搜索方案
+    <select id="plan-select">
+      <option value="half">半日方案（180 分钟）</option>
+      <option value="day">一日方案（420 分钟，跨片区）</option>
+      <option value="family">亲子方案（120 分钟）</option>
+    </select>
+  </label>
+  <label>预制主题
+    <select id="theme-select">
+      <option value="tr_anj_half">问拱半日</option>
+      <option value="tr_two_bridges_day">双桥一日（跨片区）</option>
+      <option value="tr_family_south">南台亲子线</option>
+    </select>
+  </label>
+  <button class="btn" id="run-btn">规划并比较</button>
+</div>
+
+<div class="notice info">
+  演练：
+  <label style="margin-left:8px"><input type="checkbox" id="close-north"> 关闭安吉桥北入口</label>
+  <span class="muted">（默认日期 2026-09-30 已处于北岸引道延期维护窗口）</span><br>
+  <span class="muted">锁定停留点（不可达则整体不可行，不静默替换）：</span>
+  <label style="margin-left:8px"><input type="checkbox" class="lock" value="n_anj_vp_n" checked> 北滩观景石</label>
+  <label style="margin-left:8px"><input type="checkbox" class="lock" value="n_anj_vp_s"> 南樟观景台</label>
+  <label style="margin-left:8px"><input type="checkbox" class="lock" value="n_qfl_vp"> 潭边观景石</label>
+  <div class="btn-row" style="margin:6px 0 0">
+    <button class="btn ghost small" id="partial-btn">尝试局部更新主题路线（替换不可达点）</button>
+  </div>
+</div>
+<div id="result"></div>
+<script type="module" src="/assets/js/routes.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>千溪古桥徒步 · 教学/演示项目。对象模型：桥梁本体 ≠ 入口 ≠ 通行段；状态精确到端、到段。</p>
+    <p>宽度或坡度未测一律显示“无法确认”；不自动认证适合儿童或无障碍；不编造真实桥梁承载保证。</p>
+  </div>
+</footer>
+<script src="/assets/js/common.js"></script>
+<script>document.querySelector('[data-nav="routes"]').classList.add('active')</script>
+</body></html>

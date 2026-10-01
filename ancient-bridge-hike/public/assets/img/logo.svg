@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="古桥徒步标志">
+  <circle cx="32" cy="32" r="30" fill="#274039"/>
+  <path d="M12 40 V30 a20 14 0 0 1 40 0 V40 Z" fill="none" stroke="#d9b45c" stroke-width="3.4"/>
+  <path d="M12 40 a20 14 0 0 1 40 0" fill="none" stroke="#d9b45c" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M10 46h44" stroke="#e9ddc0" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="32" cy="20" r="3" fill="#e9ddc0"/>
+  <path d="M30 23h4l2 8h-8z" fill="#e9ddc0"/>
+</svg>

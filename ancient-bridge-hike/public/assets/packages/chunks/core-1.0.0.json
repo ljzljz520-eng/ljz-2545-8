@@ -1,0 +1,37 @@
+{
+  "core": {
+    "id": "core",
+    "version": "1.0.0",
+    "kind": "空间库骨架",
+    "items": [
+      "节点与通行段索引",
+      "入口对象表",
+      "维护日历占位"
+    ]
+  },
+  "stories": {
+    "id": "core",
+    "version": "1.0.0",
+    "kind": "桥梁故事文本",
+    "body": "千溪谷—松坡 古桥徒步离线导览｜安吉石拱桥与清风廊桥故事（1.0.0 版校订）。"
+  },
+  "map": {
+    "id": "core",
+    "version": "1.0.0",
+    "kind": "分幅示意地图",
+    "tiles": [
+      "qianxi-01",
+      "qianxi-02",
+      "songpo-01"
+    ]
+  },
+  "media": {
+    "id": "core",
+    "version": "1.0.0",
+    "kind": "原创插画与解说音频脚本",
+    "files": [
+      "arch-hero.svg",
+      "covered-bridge.svg"
+    ]
+  }
+}

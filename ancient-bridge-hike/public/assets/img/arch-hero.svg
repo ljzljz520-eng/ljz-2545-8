@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-label="安吉石拱桥原创插画">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6e7c8"/><stop offset="1" stop-color="#e8c98f"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6f8f83"/><stop offset="1" stop-color="#415f58"/>
+    </linearGradient>
+    <pattern id="stone" width="26" height="16" patternUnits="userSpaceOnUse">
+      <rect width="26" height="16" fill="#8d8474"/>
+      <path d="M0 0h26M0 8h26M13 0v8M0 16h26M0 8v8" stroke="#6f675b" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="360" fill="url(#sky)"/>
+  <circle cx="650" cy="70" r="34" fill="#e9b949" opacity=".8"/>
+  <path d="M0 240 120 200 250 232 380 196 520 230 660 204 800 236v124H0z" fill="#7d8a67"/>
+  <!-- 山体 -->
+  <path d="M40 240 210 96 360 240z" fill="#5d6b58" opacity=".55"/>
+  <path d="M300 240 470 70 650 240z" fill="#4f604f" opacity=".6"/>
+  <!-- 水面 -->
+  <rect y="250" width="800" height="110" fill="url(#water)"/>
+  <g stroke="#dfe7dc" opacity=".35" stroke-width="2">
+    <path d="M60 286h120M240 300h180M470 280h150M120 322h260M430 330h200"/>
+  </g>
+  <!-- 石拱桥 -->
+  <path d="M120 250 V196 A150 120 0 0 1 420 196 V250 Z" fill="url(#stone)"/>
+  <path d="M150 250 V206 a120 92 0 0 1 240 0 V250 Z" fill="#caa66a"/>
+  <path d="M150 250 V206 a120 92 0 0 1 240 0 V250 Z" fill="none" stroke="#6f675b" stroke-width="2"/>
+  <!-- 券脸锁口石 -->
+  <g fill="#a89a7f" stroke="#5f574b">
+    <rect x="258" y="112" width="24" height="14"/><rect x="286" y="112" width="24" height="14"/>
+  </g>
+  <!-- 桥面起伏 -->
+  <path d="M120 196 q150 -34 300 0" fill="none" stroke="#5b5347" stroke-width="7" stroke-linecap="round"/>
+  <g stroke="#d8cfb8" stroke-width="2" opacity=".8">
+    <path d="M150 188h26M186 182h26M226 178h26M270 176h26M316 178h26M358 184h26"/>
+  </g>
+  <!-- 倒影 -->
+  <path d="M150 252 v44 a120 60 0 0 0 240 0 v-44" fill="#51695f" opacity=".55"/>
+  <!-- 行人剪影 -->
+  <g fill="#3d382f">
+    <circle cx="250" cy="176" r="5"/><path d="M247 182 h6 l3 16 h-12z"/>
+    <circle cx="300" cy="172" r="5"/><path d="M297 178 h6 l3 16 h-12z"/>
+  </g>
+  <!-- 古樟 -->
+  <g>
+    <rect x="556" y="186" width="10" height="60" fill="#6b4f33"/>
+    <circle cx="561" cy="170" r="34" fill="#4d6048"/><circle cx="585" cy="184" r="22" fill="#58704f"/>
+  </g>
+</svg>

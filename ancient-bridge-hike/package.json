@@ -1,0 +1,13 @@
+{
+  "name": "ancient-bridge-hike",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "古桥徒步网站：端级开放状态、约束化路线规划、版本化离线导览包（虚构演示数据）",
+  "scripts": {
+    "start": "node server/server.mjs",
+    "build:packages": "node tools/build-packages.mjs",
+    "test": "node test/acceptance.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

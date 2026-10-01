@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>首页 · 千溪古桥徒步</title>
+<link rel="icon" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<div class="banner">示例工程：桥梁、片区与维护日历均为虚构演示数据；本平台不提供任何真实桥梁承载/安全保证。</div>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/index.html"><img src="/assets/img/logo.svg" alt="">千溪古桥徒步</a>
+    <nav class="nav">
+      <a href="/index.html" data-nav="home">首页</a>
+      <a href="/bridges.html" data-nav="bridges">桥梁故事</a>
+      <a href="/routes.html" data-nav="routes">路线规划</a>
+      <a href="/offline.html" data-nav="offline">离线导览</a>
+      <a href="/design.html" data-nav="design">设计说明</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<section class="hero">
+  <img src="/assets/img/arch-hero.svg" alt="安吉石拱桥原创插画：溪谷石拱、古樟与行人剪影">
+  <div class="overlay">
+    <h1>走过溪峡，读一座桥</h1>
+    <p>半日、一日与亲子方案 · 端级开放状态 · 带版本清单的离线导览</p>
+  </div>
+</section>
+
+<div class="grid cols-3">
+  <article class="card">
+    <h3>桥梁不是一个布尔值</h3>
+    <p class="muted">桥梁本体、两端入口、附近道路是三类对象。北端引道维护会切断穿越，却不影响你在南端古樟下看拱券倒影。</p>
+    <a class="btn ghost small" href="/bridges.html">看桥梁故事页 →</a>
+  </article>
+  <article class="card">
+    <h3>按数据约束求路径</h3>
+    <p class="muted">规划器只读实测净宽与坡度。未测量的路段显示“无法确认”，绝不自动标注适合儿童或轮椅可达。</p>
+    <a class="btn ghost small" href="/routes.html">比较主题与按图搜索 →</a>
+  </article>
+  <article class="card">
+    <h3>离线包缺块不可用</h3>
+    <p class="muted">导览包按块下载并逐块校验 SHA-256；任何一块缺失或损坏，整包保持不可用，旧版本回灌会被拒绝。</p>
+    <a class="btn ghost small" href="/offline.html">体验分块下载 →</a>
+  </article>
+</div>
+
+<div class="card" style="margin-top:18px" id="home-status">
+  <h3>今日（<span id="today"></span>）两座桥的端级状态</h3>
+  <div id="status-body" class="grid cols-2"><p class="muted">加载中…</p></div>
+</div>
+<script type="module" src="/assets/js/home.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>千溪古桥徒步 · 教学/演示项目。对象模型：桥梁本体 ≠ 入口 ≠ 通行段；状态精确到端、到段。</p>
+    <p>宽度或坡度未测一律显示“无法确认”；不自动认证适合儿童或无障碍；不编造真实桥梁承载保证。</p>
+  </div>
+</footer>
+<script src="/assets/js/common.js"></script>
+<script>document.querySelector("[data-nav=home]").classList.add("active")</script>
+</body></html>

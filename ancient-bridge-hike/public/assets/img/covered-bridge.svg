@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-label="清风廊桥原创插画">
+  <defs>
+    <linearGradient id="cw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#efe3cf"/><stop offset="1" stop-color="#d8c39a"/>
+    </linearGradient>
+    <linearGradient id="cw2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5f7d72"/><stop offset="1" stop-color="#3c5750"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="320" fill="url(#cw)"/>
+  <path d="M0 210 160 150 320 205 500 150 800 205v115H0z" fill="#77846b"/>
+  <rect y="222" width="800" height="98" fill="url(#cw2)"/>
+  <g stroke="#eef3ec" opacity=".3"><path d="M40 250h160M260 266h220M540 252h180"/></g>
+  <!-- 廊屋屋面 -->
+  <path d="M120 150 L400 66 L680 150 Z" fill="#6b4a36"/>
+  <path d="M104 150 L400 58 L696 150 Z" fill="none" stroke="#4e3526" stroke-width="6" stroke-linejoin="round"/>
+  <!-- 瓦垄 -->
+  <g stroke="#4e3526" opacity=".6">
+    <path d="M180 132 400 74 620 132"/><path d="M230 119 400 79 570 119"/><path d="M282 106 400 84 518 106"/>
+  </g>
+  <!-- 木拱 -->
+  <path d="M140 224 q260 -120 520 0" fill="none" stroke="#7a5636" stroke-width="10"/>
+  <path d="M160 224 q240 -96 480 0" fill="none" stroke="#8d6640" stroke-width="6"/>
+  <!-- 廊柱九间 -->
+  <g fill="#7a5636">
+    <g id="bay"><rect x="160" y="150" width="9" height="74"/></g>
+  </g>
+  <g fill="#7a5636">
+    <rect x="160" y="150" width="9" height="74"/><rect x="214" y="142" width="9" height="82"/>
+    <rect x="268" y="137" width="9" height="87"/><rect x="322" y="134" width="9" height="90"/>
+    <rect x="396" y="133" width="9" height="91"/><rect x="469" y="134" width="9" height="90"/>
+    <rect x="523" y="137" width="9" height="87"/><rect x="577" y="142" width="9" height="82"/>
+    <rect x="631" y="150" width="9" height="74"/>
+  </g>
+  <!-- 坐凳栏杆 -->
+  <rect x="158" y="196" width="484" height="7" fill="#96704a"/>
+  <!-- 桥板 -->
+  <rect x="140" y="218" width="520" height="10" fill="#5b412c"/>
+  <!-- 红灯笼（不点明火，仅装饰示意） -->
+  <g fill="#b5462f"><circle cx="268" cy="160" r="7"/><circle cx="396" cy="156" r="7"/><circle cx="523" cy="160" r="7"/></g>
+  <!-- 远山雾 -->
+  <path d="M0 190 120 120 260 190z" fill="#8e9a86" opacity=".5"/>
+  <path d="M560 192 680 112 800 192z" fill="#8e9a86" opacity=".5"/>
+</svg>
