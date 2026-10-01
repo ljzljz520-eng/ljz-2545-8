@@ -1,0 +1,11 @@
+{
+  "name": "gushao-hike",
+  "version": "1.0.0",
+  "description": "古桥徒步导览网站（教学/验收演示，数据均为虚构）",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build:packages": "node build_packages.mjs",
+    "serve": "python3 -m http.server 8080"
+  }
+}

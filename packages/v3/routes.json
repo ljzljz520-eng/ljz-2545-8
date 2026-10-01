@@ -1,0 +1,99 @@
+{
+  "id": "routes",
+  "payload": {
+    "profiles": {
+      "half": {
+        "name": "半日方案",
+        "maxMin": 240,
+        "minWidthM": 1.5,
+        "maxSlopePct": 15,
+        "requireKnown": false,
+        "note": "未知宽度/坡度可通行但标注“无法确认”"
+      },
+      "full": {
+        "name": "一日方案",
+        "maxMin": 480,
+        "minWidthM": 1.5,
+        "maxSlopePct": 15,
+        "requireKnown": false,
+        "note": "可跨片区；未知数据同样标注，不影响徒步硬阻断"
+      },
+      "family": {
+        "name": "亲子方案",
+        "minWidthM": 2,
+        "maxSlopePct": 8,
+        "requireKnown": true,
+        "note": "宽度或坡度未知 => 无法确认适合儿童，绝不自动标“适合儿童”"
+      },
+      "accessible": {
+        "name": "无障碍核对",
+        "minWidthM": 3,
+        "maxSlopePct": 4,
+        "requireKnown": true,
+        "note": "宽度或坡度未知 => 无法确认无障碍，绝不自动标“无障碍”；且全程不得有台阶阻断信息缺失"
+      }
+    },
+    "themedRoutes": [
+      {
+        "id": "t1",
+        "profile": "half",
+        "name": "北岸卧虹半日线",
+        "sequence": [
+          "np",
+          "b1-n-gate",
+          "b1-mid",
+          "b1-n-gate",
+          "n-view",
+          "pavilion"
+        ],
+        "dwell": {
+          "b1-mid": 15,
+          "n-view": 20,
+          "pavilion": 25
+        },
+        "timeBudgetMin": 210,
+        "district": "xigu"
+      },
+      {
+        "id": "t2",
+        "profile": "full",
+        "name": "双溪一日跨区线",
+        "sequence": [
+          "np",
+          "b1-n-gate",
+          "b1-mid",
+          "b1-n-gate",
+          "b2-w-gate",
+          "b2-e-gate",
+          "teahouse",
+          "dp"
+        ],
+        "dwell": {
+          "b1-mid": 15,
+          "n-view": 0,
+          "b2-w-gate": 10,
+          "teahouse": 40
+        },
+        "timeBudgetMin": 480,
+        "district": "xigu→dongxi"
+      },
+      {
+        "id": "t3",
+        "profile": "family",
+        "name": "廊桥雨音亲子线",
+        "sequence": [
+          "dp",
+          "b2-e-gate",
+          "b2-e-gate",
+          "teahouse",
+          "dp"
+        ],
+        "dwell": {
+          "teahouse": 40
+        },
+        "timeBudgetMin": 300,
+        "district": "dongxi"
+      }
+    ]
+  }
+}

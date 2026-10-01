@@ -1,0 +1,9 @@
+{
+  "id": "base",
+  "payload": {
+    "schema": "gushao-hike/v3",
+    "title": "古桥徒步离线导览",
+    "disclaimer": "全部桥梁与历史叙述为虚构教学示例；不提供真实承载保证。",
+    "generatedFor": "2026.09.30-v3"
+  }
+}

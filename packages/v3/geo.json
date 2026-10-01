@@ -1,0 +1,320 @@
+{
+  "id": "geo",
+  "payload": {
+    "nodes": [
+      {
+        "id": "np",
+        "name": "北岸停车场",
+        "kind": "parking",
+        "district": "xigu",
+        "x": 20,
+        "y": 390
+      },
+      {
+        "id": "b1-n-gate",
+        "name": "卧虹桥·北岸入口",
+        "kind": "entrance",
+        "district": "xigu",
+        "x": 52,
+        "y": 318,
+        "bridgeId": "b1"
+      },
+      {
+        "id": "n-view",
+        "name": "北端观景位（歇肩石）",
+        "kind": "view",
+        "district": "xigu",
+        "x": 60,
+        "y": 300,
+        "bridgeId": "b1"
+      },
+      {
+        "id": "b1-mid",
+        "name": "卧虹桥·拱顶",
+        "kind": "junction",
+        "district": "xigu",
+        "x": 105,
+        "y": 250,
+        "bridgeId": "b1"
+      },
+      {
+        "id": "b1-s-gate",
+        "name": "卧虹桥·南岸入口",
+        "kind": "entrance",
+        "district": "xigu",
+        "x": 158,
+        "y": 182,
+        "bridgeId": "b1"
+      },
+      {
+        "id": "s-view",
+        "name": "南端观景位（倒影潭）",
+        "kind": "view",
+        "district": "xigu",
+        "x": 168,
+        "y": 165,
+        "bridgeId": "b1"
+      },
+      {
+        "id": "sp",
+        "name": "南岸停车场",
+        "kind": "parking",
+        "district": "xigu",
+        "x": 190,
+        "y": 110
+      },
+      {
+        "id": "pavilion",
+        "name": "西谷茶亭",
+        "kind": "shelter",
+        "district": "xigu",
+        "x": 230,
+        "y": 330
+      },
+      {
+        "id": "dp",
+        "name": "东溪停车场",
+        "kind": "parking",
+        "district": "dongxi",
+        "x": 470,
+        "y": 390
+      },
+      {
+        "id": "b2-e-gate",
+        "name": "听雨廊桥·东岸入口",
+        "kind": "entrance",
+        "district": "dongxi",
+        "x": 452,
+        "y": 318,
+        "bridgeId": "b2"
+      },
+      {
+        "id": "b2-w-gate",
+        "name": "听雨廊桥·西岸入口",
+        "kind": "entrance",
+        "district": "dongxi",
+        "x": 360,
+        "y": 268,
+        "bridgeId": "b2"
+      },
+      {
+        "id": "teahouse",
+        "name": "听雨茶寮",
+        "kind": "stop",
+        "district": "dongxi",
+        "x": 430,
+        "y": 205
+      },
+      {
+        "id": "xiyuan-stop",
+        "name": "西源古道停留点",
+        "kind": "stop",
+        "district": "xiyuan",
+        "x": 565,
+        "y": 80
+      },
+      {
+        "id": "b3-s-gate",
+        "name": "踱秋桥·南埠头入口",
+        "kind": "entrance",
+        "district": "xiyuan",
+        "x": 545,
+        "y": 120,
+        "bridgeId": "b3"
+      },
+      {
+        "id": "b3-n-gate",
+        "name": "踱秋桥·北路口入口",
+        "kind": "entrance",
+        "district": "xiyuan",
+        "x": 500,
+        "y": 210,
+        "bridgeId": "b3"
+      }
+    ],
+    "edges": [
+      {
+        "id": "b1-deck-n",
+        "kind": "deck",
+        "a": "b1-n-gate",
+        "b": "b1-mid",
+        "lenM": 20,
+        "widthM": 2.6,
+        "slopePct": 6,
+        "surface": "后期归安石板"
+      },
+      {
+        "id": "b1-deck-s",
+        "kind": "deck",
+        "a": "b1-mid",
+        "b": "b1-s-gate",
+        "lenM": 18,
+        "widthM": 2.1,
+        "slopePct": 8,
+        "surface": "旧石板（局部不平）"
+      },
+      {
+        "id": "b1-acc-n",
+        "kind": "approach",
+        "a": "np",
+        "b": "b1-n-gate",
+        "lenM": 90,
+        "widthM": 3.4,
+        "slopePct": 5,
+        "surface": "石板游道"
+      },
+      {
+        "id": "b1-acc-s",
+        "kind": "approach",
+        "a": "b1-s-gate",
+        "b": "sp",
+        "lenM": 95,
+        "widthM": 1.8,
+        "slopePct": 12,
+        "surface": "碎石坡道"
+      },
+      {
+        "id": "b1-n-view-e",
+        "kind": "approach",
+        "a": "b1-n-gate",
+        "b": "n-view",
+        "lenM": 25,
+        "widthM": 2.8,
+        "slopePct": 3,
+        "surface": "石板平台"
+      },
+      {
+        "id": "b1-s-view-e",
+        "kind": "approach",
+        "a": "b1-s-gate",
+        "b": "s-view",
+        "lenM": 20,
+        "widthM": 2.6,
+        "slopePct": 4,
+        "surface": "石板平台"
+      },
+      {
+        "id": "b1-n-pavilion",
+        "kind": "approach",
+        "a": "b1-n-gate",
+        "b": "pavilion",
+        "lenM": 180,
+        "widthM": 2.2,
+        "slopePct": 4,
+        "surface": "北岸沙土步道"
+      },
+      {
+        "id": "b2-deck",
+        "kind": "deck",
+        "a": "b2-w-gate",
+        "b": "b2-e-gate",
+        "lenM": 54,
+        "widthM": 3.1,
+        "slopePct": 1,
+        "surface": "廊内木板"
+      },
+      {
+        "id": "b2-acc-e",
+        "kind": "approach",
+        "a": "dp",
+        "b": "b2-e-gate",
+        "lenM": 80,
+        "widthM": 4,
+        "slopePct": 2,
+        "surface": "石板缓坡"
+      },
+      {
+        "id": "b2-acc-tea",
+        "kind": "approach",
+        "a": "b2-e-gate",
+        "b": "teahouse",
+        "lenM": 130,
+        "widthM": 2.4,
+        "slopePct": 7,
+        "surface": "山径石阶"
+      },
+      {
+        "id": "b2-acc-w",
+        "kind": "approach",
+        "a": "b2-w-gate",
+        "b": "pavilion",
+        "lenM": 150,
+        "widthM": 2,
+        "slopePct": 9,
+        "surface": "溪畔土路"
+      },
+      {
+        "id": "b3-deck",
+        "kind": "deck",
+        "a": "b3-s-gate",
+        "b": "b3-n-gate",
+        "lenM": 34,
+        "widthM": 2,
+        "slopePct": 2,
+        "surface": "并列石梁"
+      },
+      {
+        "id": "b3-acc-s",
+        "kind": "approach",
+        "a": "xiyuan-stop",
+        "b": "b3-s-gate",
+        "lenM": 60,
+        "widthM": 2.2,
+        "slopePct": 6,
+        "surface": "条石埠头"
+      },
+      {
+        "id": "g-vill",
+        "kind": "approach",
+        "a": "b3-n-gate",
+        "b": "xiyuan-stop",
+        "lenM": 700,
+        "widthM": null,
+        "slopePct": null,
+        "surface": "旧村道（待测绘）"
+      },
+      {
+        "id": "np-dp",
+        "kind": "cross",
+        "a": "np",
+        "b": "dp",
+        "lenM": 460,
+        "widthM": null,
+        "slopePct": 7,
+        "surface": "林间山径",
+        "crossDistricts": [
+          "xigu",
+          "dongxi"
+        ]
+      },
+      {
+        "id": "n-ramp",
+        "kind": "cross",
+        "a": "b1-n-gate",
+        "b": "b2-w-gate",
+        "lenM": 280,
+        "widthM": 3,
+        "slopePct": 4,
+        "surface": "北岸连通缓坡（无障碍坡道标准示范段）",
+        "crossDistricts": [
+          "xigu",
+          "dongxi"
+        ]
+      },
+      {
+        "id": "d-tea-xiyuan",
+        "kind": "cross",
+        "a": "teahouse",
+        "b": "xiyuan-stop",
+        "lenM": 300,
+        "widthM": 1.6,
+        "slopePct": 11,
+        "surface": "东山脊窄径",
+        "crossDistricts": [
+          "dongxi",
+          "xiyuan"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "version": "2026.09.30-v3",
+  "releasedAt": "2026-09-30T08:00:00+08:00",
+  "archived": false,
+  "chunks": [
+    {
+      "id": "base",
+      "file": "base.json",
+      "bytes": 250,
+      "sha256": "6d8efc0805131a54206275a36c245ea6160d4a33dfcf9d4073369229b7738b7f"
+    },
+    {
+      "id": "bridges",
+      "file": "bridges.json",
+      "bytes": 1420,
+      "sha256": "40395dc2f11275667b4d3d6cf2c4549fadcd284b84d73c58d57f264a9030bdb0"
+    },
+    {
+      "id": "geo",
+      "file": "geo.json",
+      "bytes": 6965,
+      "sha256": "db0b7b77a8230ac88271611049a080a416e182c7b730b06d7b6fae7292c70b02"
+    },
+    {
+      "id": "routes",
+      "file": "routes.json",
+      "bytes": 2382,
+      "sha256": "eec249cdbb06427b4107e963a986f28768f6356634366f4a8b1d61eb06ffa483"
+    },
+    {
+      "id": "media1",
+      "file": "media1.json",
+      "bytes": 322,
+      "sha256": "98afab5c4fece48e990c3f5d7d2b4f6d292fe05e5d9b320d3c6482cd56987d8a"
+    }
+  ],
+  "note": "当前版本。缺任一块或哈希不符都不得视为完整、不得激活。"
+}

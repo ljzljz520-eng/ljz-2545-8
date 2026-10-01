@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>离线导览包 · 古桥徒步</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="banner-slot"></div>
+<div class="wrap">
+  <h1>离线导览包</h1>
+  <p class="subtitle">带版本清单的<b>分块下载</b>：每块有 sha256，逐块校验。缺块或哈希不符 → 包不完整，绝不当完整可用，更不能激活覆盖。</p>
+
+  <div class="card">
+    <h3 style="margin-top:4px">目录中的版本</h3>
+    <div id="catalog-view"></div>
+  </div>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h3 style="margin-top:0">① 下载当前版本 v3（分块）</h3>
+      <div class="row">
+        <label><input type="checkbox" id="opt-delay"> 慢速分块（每块 350ms，便于观察逐块到达）</label>
+      </div>
+      <div class="row" style="margin-top:6px">
+        <label><input type="checkbox" id="opt-missing"> 注入缺块：<span class="kbd">media1</span> 返回 404</label>
+      </div>
+      <div class="row" style="margin-top:6px">
+        <label><input type="checkbox" id="opt-corrupt"> 注入坏块：篡改 <span class="kbd">geo</span> 后哈希应不符</label>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button class="moss" id="btn-download">开始分块下载</button>
+        <button class="ghost" id="btn-activate">下载完整后激活</button>
+        <button class="danger" id="btn-clear">清除本机包记录</button>
+      </div>
+      <div id="dl-progress" style="margin-top:12px"></div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">② 旧包回灌验收（v1 归档）</h3>
+      <p class="muted">v1 只有 <span class="kbd">base</span> 与 <span class="kbd">bridges</span> 两块，是历史归档。下载后尝试“回灌激活”，系统必须拒绝，且不能覆盖当前 v3。</p>
+      <div class="row">
+        <button class="ghost" id="btn-v1-download">下载归档 v1</button>
+        <button class="danger" id="btn-v1-activate">尝试回灌激活 v1（应被拒绝）</button>
+      </div>
+      <div id="v1-progress" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">本机持久化状态（localStorage）</h3>
+    <pre id="store-view" style="white-space:pre-wrap;font-size:12px;background:#f4efe3;border:1px solid var(--line);border-radius:10px;padding:10px;max-height:260px;overflow:auto"></pre>
+  </div>
+
+  <div class="notice info">
+    <b>关于真实下载</b>
+    通过 <span class="kbd">python3 -m http.server</span> 访问时，块文件来自 <span class="kbd">packages/v3/</span>；
+    以 <span class="kbd">file://</span> 直接打开时 fetch 受限，会回退到内置同源块（哈希与文件一致），分块、缺块、哈希与激活门控语义完全相同。
+  </div>
+</div>
+<script type="module" src="js/offline.js"></script>
+</body>
+</html>

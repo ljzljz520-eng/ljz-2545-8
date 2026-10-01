@@ -1,0 +1,17 @@
+{
+  "id": "media1",
+  "payload": {
+    "assets": [
+      {
+        "id": "fig-b1",
+        "kind": "inline-svg",
+        "title": "卧虹桥结构示意（原创绘制）"
+      },
+      {
+        "id": "fig-map",
+        "kind": "inline-svg",
+        "title": "三片区平面示意（原创绘制）"
+      }
+    ]
+  }
+}

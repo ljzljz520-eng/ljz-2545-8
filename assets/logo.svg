@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="古桥徒步标识">
+  <rect width="64" height="64" rx="12" fill="#b3482f"/>
+  <rect x="6" y="6" width="52" height="52" rx="9" fill="none" stroke="#fff7ec" stroke-width="1.6" opacity=".5"/>
+  <!-- 单孔石拱 + 溪水（原创） -->
+  <path d="M14 46 V36 Q32 20 50 36 V46 H44 V38 Q32 26 20 38 V46 Z" fill="#f4efe3"/>
+  <path d="M20 46 Q32 56 44 46" fill="none" stroke="#7f9aa6" stroke-width="2.4" stroke-linecap="round"/>
+  <g stroke="#f4efe3" stroke-width="1.6" opacity=".8">
+    <line x1="18" y1="30" x2="22" y2="44"/><line x1="32" y1="25" x2="32" y2="45"/><line x1="46" y1="30" x2="42" y2="44"/>
+  </g>
+  <circle cx="32" cy="14" r="2.4" fill="#f4efe3"/>
+</svg>

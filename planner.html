@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>路线规划 · 古桥徒步</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>路线规划</h1>
+  <p class="subtitle">按空间库里的明确数据约束求可行路径。宽度或坡度未知时显示「无法确认」，不自动标“适合儿童/无障碍”。</p>
+
+  <div class="card">
+    <h3 style="margin-top:4px">验收场景开关（改变当日状态，非改数据）</h3>
+    <div class="row">
+      <label class="field" style="min-width:170px">规划日期
+        <input type="date" id="date" value="2026-09-30"></label>
+      <label class="field" style="min-width:220px">临时关闭入口
+        <select id="close-entrance"><option value="">（不额外关闭）</option></select></label>
+      <label class="field" style="min-width:220px">临时封断通行段
+        <select id="block-edge"><option value="">（不额外封断）</option></select></label>
+      <label class="field" style="min-width:200px">暂停（解除）维护项目
+        <select id="ignore-maint"><option value="">（按计划生效）</option></select></label>
+    </div>
+    <div class="row" style="margin-top:6px">
+      <button class="ghost" id="reset-scenario">重置为基准日场景</button>
+      <button class="ghost" id="scenario-delay">一键：查看维护延期（m2 挡墙）</button>
+      <button class="ghost" id="scenario-north">一键：北端入口也关闭（穿越两端均断）</button>
+    </div>
+    <p class="muted" id="scenario-desc"></p>
+  </div>
+
+  <div class="planner-grid">
+    <div>
+      <div class="tabs">
+        <button id="tab-themed" class="active">预制主题路线</button>
+        <button id="tab-search">按图搜索</button>
+      </div>
+
+      <div id="pane-themed" class="tabpane">
+        <p class="muted">预制路线是“写死的停留序列”，规划器逐段核验其在当日约束下是否仍然成立——维护变更后可能整段作废。</p>
+        <label class="field">方案类型
+          <select id="themed-profile"></select></label>
+        <div id="themed-list"></div>
+      </div>
+
+      <div id="pane-search" class="tabpane" hidden>
+        <p class="muted">按图搜索：给出起点、终点并<b>锁定停留点</b>。锁定后不可达会解释“被哪条边/入口、因什么约束挡住”，并只对坏段局部更新。</p>
+        <label class="field">方案类型 <select id="search-profile"></select></label>
+        <label class="field">起点 <select id="start-node"></select></label>
+        <label class="field">终点 <select id="finish-node"></select></label>
+        <label class="field">锁定停留点（按住 Ctrl 多选，顺序即访问顺序）
+          <select id="lock-nodes" multiple size="6"></select></label>
+        <div class="row">
+          <button class="moss" id="run-search">求可行路径</button>
+          <button class="ghost" id="demo-lock">演示：锁定被维护切断的观景位</button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div id="map"></div>
+      <div id="result"></div>
+    </div>
+  </div>
+</div>
+<script type="module" src="js/planner.js"></script>
+</body>
+</html>

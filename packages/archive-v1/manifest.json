@@ -1,0 +1,20 @@
+{
+  "version": "2026.06.01-v1",
+  "releasedAt": "2026-06-01T08:00:00+08:00",
+  "archived": true,
+  "chunks": [
+    {
+      "id": "base",
+      "file": "base.json",
+      "bytes": 159,
+      "sha256": "ddbae72ba588a443ade31b7a5191b9c499a87ab2c62b15d7d279de6013571f6a"
+    },
+    {
+      "id": "bridges",
+      "file": "bridges.json",
+      "bytes": 172,
+      "sha256": "4d4a56f693abf1ee93589c9ea63123f6a37d895588acba77902991bb96ea03b2"
+    }
+  ],
+  "note": "旧包（归档）。用于“旧包回灌”验收：只能查看，拒绝激活、拒绝覆盖当前版本。"
+}

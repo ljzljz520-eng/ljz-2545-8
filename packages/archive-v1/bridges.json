@@ -1,0 +1,11 @@
+{
+  "id": "bridges",
+  "payload": [
+    {
+      "id": "b1",
+      "name": "卧虹桥",
+      "type": "单孔石拱桥",
+      "dynasty": "仿明式（虚构）"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>古桥徒步 · 溪谷寻桥导览</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <h1>溪谷寻桥</h1>
+      <p class="lead">沿溪谷古道步行，阅读古桥的结构、桥窗与守护故事。我们把<b>桥梁本体、桥头入口、附近道路</b>当作不同对象分别记录：一端施工，只关闭那一端与对应通行段，不会简单地给整座桥一个“关闭”。</p>
+      <div class="cta-row">
+        <a class="btn moss" href="bridge.html">看桥梁故事</a>
+        <a class="btn" href="planner.html">规划徒步路线</a>
+        <a class="btn ghost" href="offline.html">下载离线包</a>
+      </div>
+      <p class="muted" style="margin-top:14px">宽度或坡度未测绘时，规划结果会明确写“无法确认”，而不是替你把路线标成“适合儿童 / 无障碍”。</p>
+    </div>
+    <div id="hero-art"></div>
+  </section>
+
+  <h2>三座虚构示意古桥</h2>
+  <div class="grid cols-3 bridge-list" id="bridge-cards"></div>
+
+  <h2>今日状态（基准日 <span id="today"></span>）</h2>
+  <div id="today-status"></div>
+
+  <h2>这个网站如何“不偷懒”</h2>
+  <div class="grid cols-3">
+    <div class="card"><h3>分对象，不搞整桥布尔</h3><p class="muted">入口门、桥面段、附近道路分别有开放/阻断状态。南岸维护切断穿越，北岸观景照常。</p></div>
+    <div class="card"><h3>按数据约束搜路</h3><p class="muted">半日 / 一日 / 亲子 / 无障碍核对各有宽度、坡度、时长硬约束；未知数据显示“无法确认”。</p></div>
+    <div class="card"><h3>锁定点不可达要解释</h3><p class="muted">锁定停留点后若不可达，给出关键阻断边与原因，并只对坏段做局部更新，不重排全路线。</p></div>
+    <div class="card"><h3>离线包分块带清单</h3><p class="muted">每个块有版本清单与 sha256；缺块或哈希不符不算完整，不能激活。</p></div>
+    <div class="card"><h3>旧包不能回灌覆盖</h3><p class="muted">旧版本包只读归档，拒绝激活、拒绝覆盖当前版本。</p></div>
+    <div class="card"><h3>拍摄方向要核对</h3><p class="muted">按机位到桥心的真实方位角核验照片方向，偏差超限即判“拍摄方向错误”。</p></div>
+  </div>
+
+  <p class="fiction-note" style="margin-top:26px">全部桥梁、地名、碑刻与历史叙述均为虚构教学示例；本站不编造也不展示任何真实桥梁承载/吨级保证。</p>
+</div>
+<script type="module" src="js/home.js"></script>
+</body>
+</html>

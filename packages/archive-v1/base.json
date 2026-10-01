@@ -1,0 +1,8 @@
+{
+  "id": "base",
+  "payload": {
+    "schema": "gushao-hike/v1",
+    "title": "古桥徒步离线导览（旧版）",
+    "generatedFor": "2026.06.01-v1"
+  }
+}
